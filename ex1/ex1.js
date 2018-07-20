@@ -1,14 +1,12 @@
-var x = 2, fns = [];
+const x = 2;
+var fns = [];
 
-(function(){
-	var x = 5;
-
-	for (var i=0; i<x; i++) {
-		// ..
-	}
-})();
-
-console.log(
+{	const x = 5;
+		for (let i=0; i<x; i++) {
+			fns[i] = function nums () { return i };
+		}
+}
+console.log (
 	(x * 2) === fns[x*2]()
 );
 // true
